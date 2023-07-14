@@ -3,28 +3,28 @@
 <head>
     <title>E-Learning Safety Demo Project</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" id="metaViewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover" data-tdv-general-scale="0.73"/>
+    <meta name="viewport" id="metaViewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover" data-tdv-general-scale="0.5"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <script src="lib/tdvplayer.js?v=1689305097641"></script>
-    <link rel="shortcut icon" href="favicon.ico?v=1689305097641">
-	<link rel="icon" sizes="48x48 32x32 16x16" href="favicon.ico?v=1689305097641">
-	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="misc/icon180.png?v=1689305097641">
-	<link rel="icon" type="image/png" sizes="16x16" href="misc/icon16.png?v=1689305097641">
-	<link rel="icon" type="image/png" sizes="32x32" href="misc/icon32.png?v=1689305097641">
-	<link rel="icon" type="image/png" sizes="192x192" href="misc/icon192.png?v=1689305097641">
-	<link rel="manifest" href="manifest.json?v=1689305097641">
+    <script src="lib/tdvplayer.js?v=1689313186590"></script>
+    <link rel="shortcut icon" href="favicon.ico?v=1689313186590">
+	<link rel="icon" sizes="48x48 32x32 16x16" href="favicon.ico?v=1689313186590">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="misc/icon180.png?v=1689313186590">
+	<link rel="icon" type="image/png" sizes="16x16" href="misc/icon16.png?v=1689313186590">
+	<link rel="icon" type="image/png" sizes="32x32" href="misc/icon32.png?v=1689313186590">
+	<link rel="icon" type="image/png" sizes="192x192" href="misc/icon192.png?v=1689313186590">
+	<link rel="manifest" href="manifest.json?v=1689313186590">
 	<meta name="msapplication-TileColor" content="#CCCCCC">
 	<meta name="msapplication-config" content="browserconfig.xml">
-	<link rel="preload" href="locale/es.txt?v=1689305097641" as="fetch" crossorigin="anonymous"/>
-	<link rel="preload" href="script.js?v=1689305097641" as="script"/>
+	<link rel="preload" href="locale/es.txt?v=1689313186590" as="fetch" crossorigin="anonymous"/>
+	<link rel="preload" href="script.js?v=1689313186590" as="script"/>
 	<script src="tdvquiz.js" type="text/javascript"></script>
 	<meta name="description" content="Virtual Tour"/>
 	<meta name="theme-color" content="#CCCCCC"/>
-    <script src="script.js?v=1689305097641"></script>
+    <script src="script.js?v=1689313186590"></script>
     <script type="text/javascript">
         var tour;
-        var devicesUrl = {"general":"script_general.js?v=1689305097641"};
+        var devicesUrl = {"mobile":"script_mobile.js?v=1689313186590","general":"script_general.js?v=1689313186590","ipad":"script_general.js?v=1689313186590"};
 
         (function()
         {
@@ -67,9 +67,9 @@
 
             var settings = new TDV.PlayerSettings();
             settings.set(TDV.PlayerSettings.CONTAINER, document.getElementById('viewer'));
-            settings.set(TDV.PlayerSettings.WEBVR_POLYFILL_URL, 'lib/WebVRPolyfill.js?v=1689305097641');
-            settings.set(TDV.PlayerSettings.HLS_URL, 'lib/Hls.js?v=1689305097641');
-            settings.set(TDV.PlayerSettings.QUERY_STRING_PARAMETERS, 'v=1689305097641');
+            settings.set(TDV.PlayerSettings.WEBVR_POLYFILL_URL, 'lib/WebVRPolyfill.js?v=1689313186590');
+            settings.set(TDV.PlayerSettings.HLS_URL, 'lib/Hls.js?v=1689313186590');
+            settings.set(TDV.PlayerSettings.QUERY_STRING_PARAMETERS, 'v=1689313186590');
 
             tour = new TDV.Tour(settings, devicesUrl);
             tour.bind(TDV.Tour.EVENT_TOUR_INITIALIZED, onVirtualTourInit);
@@ -319,8 +319,7 @@
     <style type="text/css">
         html, body { height:100%; width:100%; height:100vh; width:100vw; margin:0; padding:0; overflow:hidden; }
         .fill-viewport { position:fixed; top:0; left:0; right:0; bottom:0; padding:0; margin:0; overflow: hidden; }
-        .fill-viewport.landscape-left { left: env(safe-area-inset-left); }
-		.fill-viewport.landscape-right { right: env(safe-area-inset-right); }
+        
         #viewer { z-index:1; }
         #preloadContainer { z-index:2; opacity:0; background-color:rgba(204,204,204,1); transition: opacity 0.5s; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s;}
     </style>
